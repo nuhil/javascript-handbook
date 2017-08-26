@@ -870,6 +870,21 @@ Then you can call the function like:
 let result = sum(40, 2);
 // => 42
 ```
+Arrow function is amazing because they would make your `this` behave properly, i.e., `this` will have the same value as in the context of the function—it won’t mutate.
+```js
+$('.btn').click((event) =>{
+  this.sendData()
+})
+
+// Or for example
+var logUpperCase = function() {
+  this.string = this.string.toUpperCase()
+  return () => console.log(this.string)
+}
+
+logUpperCase.call({ string: 'es6 rocks' })()
+```
+
 **Default Value of Parameter**
 ```js
 // Default values are defined next to parameters
