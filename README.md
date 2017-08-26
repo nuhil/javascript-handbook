@@ -1507,6 +1507,42 @@ myPromsise.then(function (result) {
 });
 ```
 
+## Modules
+In ES5 for example in Nodejs which makes use of CommonJS, let’s say we have `port` variable and `getAccounts` method in `module.js`:
+```js
+module.exports = {
+  port: 3000,
+  getAccounts: function() {
+    ...
+  }
+}
+```
+In ES5 `main.js`, we would require that dependency:
+
+```js
+var service = require('module.js')
+console.log(service.port) // 3000
+```
+
+### Modules in ES6
+In ES6, we would use export and import. For example, this is our library in the ES6 module.js file:
+```js
+export var port = 3000
+export function getAccounts(url) {
+  ...
+}
+```
+In the importer ES6 file main.js, we use import {name} from 'my-module' syntax. For example,
+```js
+import {port, getAccounts} from 'module'
+console.log(port) // 3000
+```
+Or we can import everything as a variable service in main.js:
+```js
+import * as service from 'module'
+console.log(service.port) // 3000
+```
+
 ## Create and throw errors
 ---
 To create an error, you have to use the `Error` constructor:
