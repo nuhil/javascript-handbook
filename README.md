@@ -371,7 +371,7 @@ alert(foo.toUpperCase());	// HELLO!
 **Some ES6 workaround**  
 
 ```js
-// Template Literals
+// Template Literals or interpolation
 let firstName = "Nuhil";
 let lastName = "Mehdy";
 
