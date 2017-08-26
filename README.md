@@ -856,6 +856,8 @@ var sum = function (a, b) {
     return a + b;
 }
 ```
+> In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object.
+
 ### Functions in ES6
 
 **Arrow Function**   
@@ -1670,7 +1672,84 @@ var myObject = JSON.parse(myJSONtext)
 var myJSONText = JSON.stringify(myObject);
 ```
 
-##Design Patterns
+## Imperative VS Object Oriented VS Functional Approach
+---
+A simple use case where users are prompted to input some words after clicking on a button and they get back all words capitalized their first letter; could be solved by all different paradigm.
+### Imperative
+```js
+var result;
+function getText() {
+  var someText = prompt("Give me something to capitalize");
+  capWords(someText);
+  alert(result.join(" "));
+};
+function capWords(input) {
+  var counter;
+  var inputArray = input.split(" ");
+  var transformed = "";
+  result = [];
+  for (counter = 0; counter < inputArray.length; counter++) {
+    transformed = [
+      inputArray[counter].charAt(0).toUpperCase(), 
+      inputArray[counter].substring(1)
+    ].join("");
+    result.push(transformed);
+  }
+};
+document.getElementById("main_button").onclick = getText;
+```
+In the above approach: Variables are being defined on the global scope. Values are being passed around and modified by functions. DOM methods are being mixed with native JavaScript. The function names are not very descriptive, and that’s due in part to the fact that the whole thing relies on a context that may or may not exist.
+
+### Object Oriented
+```js
+(function() {
+  "use strict";
+  var SomeText = function(text) {
+    this.text = text;
+  };
+  SomeText.prototype.capify = function(str) {
+    var firstLetter = str.charAt(0);
+    var remainder = str.substring(1);
+    return [firstLetter.toUpperCase(), remainder].join("");
+  };
+  SomeText.prototype.capifyWords = function() {
+    var result = [];
+    var textArray = this.text.split(" ");
+    for (var counter = 0; counter < textArray.length; counter++) {
+      result.push(this.capify(textArray[counter]));
+    }
+    return result.join(" ");
+  };
+
+  document.getElementById("main_button").addEventListener("click", function(e) {
+    var something = prompt("Give me something to capitalize");
+    var newText = new SomeText(something);
+    alert(newText.capifyWords());
+  });
+}());
+```
+In the above approach: Methods live on the new object’s prototype to keep memory use low. And all of the code is isolated in an anonymous immediately-invoked function expression so it doesn’t litter the global scope. There’s even a "use strict" directive to take advantage of the latest JavaScript engine, and the old-fashioned onclick method has been replaced with a shiny new `addEventListener`.   
+There are still many artifacts of the same imperative style that led us here. The methods in the constructor function rely on variables that are scoped to the parent object. There’s a looping construct for iterating across all the members of the array of strings. There’s a `counter` variable that serves no purpose other than to increment the progress through the `for` loop.
+
+### Functional
+```js
+(function() {
+  "use strict";
+  var capify = function(str) {
+    return [str.charAt(0).toUpperCase(), str.substring(1)].join("");
+  };
+  var processWords = function(fn, str) {
+    return str.split(" ").map(fn).join(" ");
+  };
+  document.getElementById("main_button").addEventListener("click", function(e) {
+    var something = prompt("Give me something to capitalize");
+    alert(processWords(capify, something));
+  });
+}());
+```
+In the above approach: There are two functions, `capify` and `processWords`. Each of these functions is pure, meaning that they don’t rely on the state of the code they’re called from. The functions don’t create side effects that alter variables outside of themselves.
+
+## Design Patterns
 ---
 ### Singleton 
 Singletons are used when you only ever want 1 object to be created. Let's say you want to create a game character with fixed stats
