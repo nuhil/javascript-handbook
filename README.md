@@ -856,7 +856,7 @@ var sum = function (a, b) {
     return a + b;
 }
 ```
-> In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object.
+> In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. Also,can be dynamically created, destroyed, passed to a function, returned as a value, and have all the rights as other variables.
 
 ### Functions in ES6
 
@@ -1674,7 +1674,7 @@ var myJSONText = JSON.stringify(myObject);
 
 ## Imperative VS Object Oriented VS Functional Approach
 ---
-A simple use case where users are prompted to input some words after clicking on a button and they get back all words capitalized their first letter; could be solved by all different paradigm.
+A simple use case where users are prompted to input some words after clicking on a button and they get back all words capitalized their first letter; could be solved by all different paradigms.
 ### Imperative
 ```js
 var result;
