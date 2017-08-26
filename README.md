@@ -1525,19 +1525,19 @@ console.log(service.port) // 3000
 ```
 
 ### Modules in ES6
-In ES6, we would use export and import. For example, this is our library in the ES6 module.js file:
+In ES6, we would use export and import. For example, this is our library in the ES6 `module.js` file:
 ```js
 export var port = 3000
 export function getAccounts(url) {
   ...
 }
 ```
-In the importer ES6 file main.js, we use import {name} from 'my-module' syntax. For example,
+In the importer ES6 file `main.js`, we use `import {name} from 'my-module'` syntax. For example,
 ```js
 import {port, getAccounts} from 'module'
 console.log(port) // 3000
 ```
-Or we can import everything as a variable service in main.js:
+Or we can import everything as a variable service in `main.js`:
 ```js
 import * as service from 'module'
 console.log(service.port) // 3000
