@@ -368,6 +368,39 @@ var foo = "Hello!";
 alert(foo.toUpperCase());	// HELLO!
 ```
 
+**trim()**   
+This function removes leading and trailing white spaces from the current string.
+```js
+var foo = "     This line has unnecessary spaces.      ";
+alert(foo.trim()); 			// This line has unnecessary spaces.
+```
+
+**charAt(index)**   
+This function returns the character at a given index of the current string.
+```js
+var foo = "Bangladesh";
+alert(foo.charAt(3)); 		// g
+```
+
+**parseInt(string[, radix])**   
+This function parses a numercial string to integer. 
+If the radix is specified it parses in the specified numeral system.
+Radix can be any integer between 2 and 36.
+```js
+var foo = "23";
+alert(parseInt(foo)); 		// 23
+var foo = "1001";
+alert(parseInt(foo,2));		// 9
+```
+
+**parseFloat(string)**   
+This function parses a numercial string to float. 
+```js
+var foo = "10.589";
+alert(parseFloat(foo)); 	// 10.589
+var foo = "10";
+alert(parseFloat(foo)); 	// 10
+```
 **Some ES6 workaround**  
 
 ```js
