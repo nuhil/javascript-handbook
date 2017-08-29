@@ -1,4 +1,5 @@
-Javascript Handbook
+## Welcome to Javascript Handbook  
+JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, object-based, multi-paradigm, and interpreted programming language.
 
 ## Comments
 ---
