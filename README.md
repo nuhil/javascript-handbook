@@ -1,3 +1,7 @@
+---
+title: "Javascript Handbook"
+---
+
 ## Comments
 ---
 Single line comments start with `//`. For multi-line commands, you use `/* ... */` 
