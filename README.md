@@ -1,6 +1,4 @@
----
-title: Javascript Handbook
----
+Javascript Handbook
 
 ## Comments
 ---
