@@ -484,6 +484,34 @@ site.test("Boo!");
 alert(site.string);
 ```
 
+### Iterating through Objects   
+`for` `in` is perfect for iterating through an object.
+```js
+const gimli = {
+    name: "Gimli",
+    race: "dwarf",
+    weapon: "battle axe",
+};
+
+// Iterate through properties of gimli
+for (let key in gimli) {
+  console.log(gimli[key]);
+}
+
+/*
+Gimli
+dwarf
+battle axe
+*/
+```
+
+```js
+// Initialize method on gimli object to return property keys
+Object.keys(gimli);
+
+// => ["name", "race", "weapon"]
+```
+
 ### ES6 Way of creating Objects   
 A more cleaner way to add methods in object.
 ```js
