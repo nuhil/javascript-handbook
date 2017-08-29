@@ -1,5 +1,5 @@
 ---
-title: "Javascript Handbook"
+title: Javascript Handbook
 ---
 
 ## Comments
