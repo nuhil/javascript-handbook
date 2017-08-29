@@ -1,6 +1,3 @@
-# Javascript Handbook
-A hand crafted markdown document contains all major Javascript topics covered, taken from different sources. Brush Up your JS memory.
-
 ## Comments
 ---
 Single line comments start with `//`. For multi-line commands, you use `/* ... */` 
