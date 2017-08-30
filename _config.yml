@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
-title: [Javascript Handbook]
-description: [A Hand Crafted Markdown Document that Contains All Major Javascript Topics Covered!]
-show_downloads: ["true"]
+title: Javascript Handbook
+description: A Hand Crafted Markdown Document that Contains All Major Javascript Topics Covered!
+show_downloads: true
