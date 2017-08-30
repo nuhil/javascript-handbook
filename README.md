@@ -2019,7 +2019,7 @@ console.log(observable.unsubscribe(OrganFanny) + " Unsubscribed");
 observable.publish('IBM at $145.33');
 ```
 
-## Optimization
+## Some Optimization Workarounds
 ---
 * High Level Optimization
 	* Algorithmic Optimization (Mathematical Analysis)
