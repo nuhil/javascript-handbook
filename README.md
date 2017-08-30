@@ -1213,7 +1213,8 @@ Nickel.prototype = new CoinObject();
 **Access Control**  
 JavaScript does not provide a direct means to control access to internal variables, however, it is possible to restrict access to some variables. To declare and use a variable as private, there are two steps required:  
 * Declare a new variable within the constructor using the var statement.
-* Create an anonymous function within the constructor, and assign it as a method for an object.
+* Create an anonymous function within the constructor, and assign it as a method for an object.   
+
 ```js
 function MyObject() {
   this.publicNumber = 10;  // Public field.
