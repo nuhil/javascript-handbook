@@ -1586,6 +1586,7 @@ console.log(service.port) // 3000
 ```
 
 ### Modules in ES6
+---
 In ES6, we would use export and import. For example, this is our library in the ES6 `module.js` file:
 ```js
 export var port = 3000
