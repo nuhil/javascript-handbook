@@ -158,6 +158,7 @@ switch (planet) {
   case "Mercury":
   case "Venus":
     console.log("Too hot here.");
+    break;
 
   case 'Earth' :
     console.log("Welcome home!");
