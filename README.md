@@ -79,14 +79,14 @@ Notice how in the first example below, we get the final value of `i` (because we
 for (var i = 0; i < 7; ++i) {
   setTimeout(function () {
     console.log(i);
-    // => 8
-    // => 8
-    // => 8
-    // => 8
-    // => 8
-    // => 8
-    // => 8
-    // => 8
+    // => 7
+    // => 7
+    // => 7
+    // => 7
+    // => 7
+    // => 7
+    // => 7
+    // => 7
   }, 1000);
 }
 
@@ -100,7 +100,6 @@ for (let i = 0; i < 7; ++i) {
     // => 4
     // => 5
     // => 6
-    // => 7
   }, 1000);
 }
 ```
