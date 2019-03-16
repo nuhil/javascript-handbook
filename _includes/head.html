@@ -1,0 +1,46 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  {% if page.description %}
+  <meta name="Description" content="{{ page.description }}">
+  {% endif %}
+
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
+
+  {% if site.ga_tracking != nil %}
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', '{{ site.ga_tracking }}', '{{ site.url }}');
+      ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+  {% endif %}
+
+  {% if site.search_enabled != nil %}
+    <script type="text/javascript" src="{{ "/assets/js/vendor/lunr.min.js" | absolute_url }}"></script>
+  {% endif %}
+  <script type="text/javascript" src="{{ "/assets/js/just-the-docs.js" | absolute_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3350277075217187",
+          enable_page_level_ads: true
+        });
+    </script>    
+  
+</head>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3350277075217187"
+     data-ad-slot="9096414251"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
