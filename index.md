@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home
+nav_order: 1
+description: "A hand crafted markdown document contains all major Javascript topics covered, taken from different sources"
+permalink: /
+---
+
 ## Welcome to Javascript Handbook  
 JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, object-based, multi-paradigm, and interpreted programming language.
 
